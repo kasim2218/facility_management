@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sentinel · Demos</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #F5F7FA; --surface: #FFFFFF; --border: #E3E8EF;
+    --text: #0F1B2D; --muted: #5B6B82; --primary: #1F5FAD; --tint: #EAF1FA;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0B1220; --surface: #121B2B; --border: #243049;
+      --text: #E6ECF5; --muted: #93A1B8; --primary: #4C8EDB; --tint: #16263F;
+    }
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: var(--bg); color: var(--text); line-height: 1.5;
+    min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 48px 16px;
+  }
+  main { width: 100%; max-width: 640px; }
+  .logo { display: flex; align-items: center; gap: 12px; margin-bottom: 28px; }
+  .logo svg { width: 40px; height: 40px; flex-shrink: 0; }
+  h1 { font-size: 24px; letter-spacing: -.01em; }
+  .sub { color: var(--muted); font-size: 14px; }
+  ul { list-style: none; display: grid; gap: 12px; }
+  a {
+    display: flex; align-items: center; gap: 16px; padding: 18px 20px;
+    background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
+    color: inherit; text-decoration: none; transition: border-color .15s, transform .15s;
+  }
+  a:hover { border-color: var(--primary); transform: translateY(-1px); }
+  a:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
+  .num {
+    width: 36px; height: 36px; border-radius: 8px; background: var(--tint); color: var(--primary);
+    display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 14px; flex-shrink: 0;
+  }
+  .txt { flex: 1; min-width: 0; }
+  .txt b { display: block; font-weight: 600; }
+  .txt span { color: var(--muted); font-size: 14px; }
+  .arrow { color: var(--muted); font-size: 18px; transition: color .15s, transform .15s; }
+  a:hover .arrow { color: var(--primary); transform: translateX(3px); }
+  footer { margin-top: 28px; color: var(--muted); font-size: 13px; text-align: center; }
+</style>
+</head>
+<body>
+<main>
+  <div class="logo">
+    <svg viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="10" fill="#1F5FAD"/><path d="M24 10 L38 15 V26 C38 34 32 39 24 42 C16 39 10 34 10 26 V15 Z" fill="none" stroke="#fff" stroke-width="3.5" stroke-linejoin="round"/></svg>
+    <div>
+      <h1>Sentinel</h1>
+      <div class="sub">Facility management dashboards · Odoo 18 theme demos</div>
+    </div>
+  </div>
+
+  <ul>
+    <li><a href="demo1/index.html">
+      <span class="num">01</span>
+      <span class="txt"><b>Command Dashboard v1</b><span>First iteration</span></span>
+      <span class="arrow">→</span></a></li>
+    <li><a href="demo2/index.html">
+      <span class="num">02</span>
+      <span class="txt"><b>Command Dashboard v2</b><span>Latest version</span></span>
+      <span class="arrow">→</span></a></li>
+    <li><a href="demo3/index.html">
+      <span class="num">03</span>
+      <span class="txt"><b>Command Dashboard v2 · Variants</b><span>Hospital &amp; Fire Station, light &amp; dark, desktop &amp; tablet</span></span>
+      <span class="arrow">→</span></a></li>
+    <li><a href="demo4/index.html">
+      <span class="num">04</span>
+      <span class="txt"><b>Sentinel Design System</b><span>Tokens, components and styles</span></span>
+      <span class="arrow">→</span></a></li>
+  </ul>
+
+  <footer>Kasim Sabah · PIT Solutions</footer>
+</main>
+</body>
+</html>
